@@ -5,760 +5,524 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Usman Rafaqat | Portfolio</title>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
 <style>
-
-  :root{
-  --bg:#0a1020;
-  --card:rgba(255,255,255,0.06);
-  --text:#ffffff;
-  --p:#7c3aed;
-  --s:#00ffae;
-}
-
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:'Poppins', sans-serif;
-}
-
-body{
-  background:var(--bg);
-  color:var(--text);
-  overflow-x:hidden;
-}
-
-/* LIGHT MODE */
-.light{
-  --bg:#f5f7ff;
-  --card:rgba(0,0,0,0.06);
-  --text:#0a1020;
-}
-
-/* ================= LOGO ================= */
-.logo{
-  display:flex;
-  align-items:center;
-  gap:10px;
-  font-weight:bold;
-  font-size:18px;
-}
-
-.logo-box{
-  width:35px;
-  height:35px;
-  border-radius:10px;
-  background:linear-gradient(135deg,var(--p),var(--s));
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-weight:bold;
-  color:white;
-  box-shadow:0 0 20px rgba(124,58,237,0.5);
-}
-
-/* NAVBAR */
-nav{
-  position:fixed;
-  top:0;
-  width:100%;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:15px 25px;
-  backdrop-filter:blur(15px);
-  background:rgba(0,0,0,0.25);
-  z-index:1000;
-}
-
-nav a{
-  color:var(--text);
-  margin:0 10px;
-  text-decoration:none;
-  transition:0.3s;
-}
-nav a:hover{
-  color:var(--s);
-}
-
-.toggle{
-  cursor:pointer;
-  padding:6px 10px;
-  background:var(--card);
-  border-radius:8px;
-}
-
-/* HERO */
-.hero{
-  height:100vh;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
-}
-
-.hero h1{
-  font-size:3rem;
-  animation:float 4s infinite ease-in-out;
-  text-shadow: 0 0 10px var(--s);
-}
-
-.hero h2{
-  color:var(--s);
-  margin:10px 0;
-  font-size:1.5rem;
-}
-
-.typing{
-  border-right:2px solid var(--text);
-  white-space:nowrap;
-  overflow:hidden;
-  width:0;
-  animation:type 4s steps(40) infinite;
-}
-
-img{
-  width:400px;
-  height:400px;
-  border-radius:50%;
-  margin-top:0px;
-  margin-left:35%;
-  box-shadow:0 0 40px rgb(7, 219, 251);
-  z-index: 1;
-}
-
-img:hover{
-  transform:scale(1.05);
-  box-shadow:0 0 30px rgba(34,211,238,0.9);
-  border: 5px solid #22d3ee;
-}
-
-/* SECTIONS */
-section{
-  padding:80px 10%;
-}
-
-/* GLASS CARD */
-.card{
-  background:var(--card);
-  padding:20px;
-  border-radius:16px;
-  backdrop-filter:blur(12px);
-  transition:0.4s;
-  transform-style:preserve-3d;
-}
-
-.card:hover{
-  transform:rotateX(8deg) rotateY(8deg) translateY(-10px);
-  box-shadow:0 10px 30px rgba(0,0,0,0.3);
-}
-
-/* GRID */
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:20px;
-}
-
-/* BUTTON */
-button{
-  padding:10px 15px;
-  border:none;
-  border-radius:10px;
-  background:linear-gradient(90deg,var(--p),var(--s));
-  color:white;
-  cursor:pointer;
-  transition:0.3s;
-}
-button:hover{
-  transform:scale(1.05);
-  box-shadow:0 0 20px var(--s);
-}
-
-/* LINKS */
-a.link{
-  color:var(--s);
-  text-decoration:none;
-  font-size:14px;
-}
-
-/* FOOTER */
-footer{
-  text-align:center;
-  padding:20px;
-  background:rgba(0,0,0,0.2);
-}
-
-/* ANIMATIONS */
-@keyframes float{
-  0%{
-    transform:translateY(0);
-    box-shadow:0 0 20px rgba(0,0,0,0.2);
-}
-  50%{
-    transform:translateY(-10px);
-    box-shadow:0 10px 20px rgba(0,0,0,0.2);
-  }
-  100%{
-    transform:translateY(0);
-    box-shadow:0 0 20px rgba(0,0,0,0.2);
-   }
-}
-
-@keyframes type{
-  0%{
-    width:0;
-  }
-  50%{
-    width:100%;
-  }
-  100%{
-    width:0;
-  }
-}
-
-.hidden{
-  opacity:0;
-  transform:translateY(40px);
-  transition:1s;
-}
-.show{
-  opacity:1;
-  transform:translateY(0);
-}
-
-/* MATRIX */
-#matrix{
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  z-index:-2;
-}
-
-/* PARTICLES */
-#particles-js{
-  position:fixed;
-  width:100%;
-  height:100%;
-  top:0;
-  left:0;
-  z-index:-1;
-}
-
-/* NAV */
-nav{
-  position:fixed;
-  width:100%;
-  display:flex;
-  justify-content:space-between;
-  padding:15px 40px;
-  background:rgba(0,0,0,0.3);
-  backdrop-filter:blur(15px);
-  z-index:1000;
-}
-
-nav a{
-  color:var(--text);
-  margin:0 12px;
-  text-decoration:none;
-  position:relative;
-}
-
-nav a::after{
-  content:"";
-  position:absolute;
-  width:0%;
-  height:2px;
-  background:var(--s);
-  bottom:-4px;
-  left:0;
-  transition:0.3s;
-}
-
-nav a:hover::after{
-  width:100%;
-  box-shadow:0 0 10px var(--s);
-}
-
-/* HERO */
-.hero{
-  height:100vh;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-}
-
-.hero h1{
-  font-size:3rem;
-  text-shadow:0 0 20px var(--s);
-}
-
-/* SECTION */
-section{
-  padding:80px 12%;
-}
-
-/* GRID */
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:20px;
-}
-
-/* CARD */
-.card{
-  background:var(--card);
-  padding:25px;
-  border-radius:16px;
-  backdrop-filter:blur(12px);
-  transition:0.4s;
-}
-
-.card:hover{
-  transform:perspective(1000px) rotateX(6deg) rotateY(-6deg) scale(1.05);
-  box-shadow:0 0 20px var(--p),0 0 40px var(--s);
-}
-
-/* BUTTON */
-button{
-  padding:10px 18px;
-  border:none;
-  border-radius:10px;
-  background:linear-gradient(90deg,var(--p),var(--s));
-  color:white;
-  cursor:pointer;
-}
-
-button:hover{
-  box-shadow:0 0 20px var(--s);
-  transform:scale(1.1);
-}
-
-button {
-  padding: 10px 15px;
-  border-radius: 10px;
-  background: linear-gradient(90deg,#7c3aed,#22d3ee);
-  color: white;
-  cursor: pointer;
-  transition: 0.3s;
-  box-shadow: 0 0 10px rgba(124,58,237,0.5);
-}
-
-button:hover {
-  transform: scale(1.08);
-  box-shadow: 0 0 25px rgba(34,211,238,0.9);
-}
-
-/* FOOTER */
-footer{
-  text-align:center;
-  padding:20px;
-}
-/* :root{
-  --bg:#0a1020;
-  --card:rgba(255,255,255,0.06);
-  --text:#ffffff;
-  --p:#7c3aed;
-  --s:#00ffae;
-}
-
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:'Poppins', sans-serif;
-}
-
-body{
-  background:var(--bg);
-  color:var(--text);
-  overflow-x:hidden;
-}
-
-/* LIGHT MODE */
-.light{
-  --bg:#f5f7ff;
-  --card:rgba(0,0,0,0.06);
-  --text:#0a1020;
-} */
-
-/* NAV */
-nav{
-  position:fixed;
-  top:0;
-  width:100%;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:12px 20px;
-  backdrop-filter:blur(15px);
-  background:rgba(0,0,0,0.3);
-  z-index:1000;
-  flex-wrap:wrap;
-  gap:10px;
-}
-
-nav a{
-  color:var(--text);
-  margin:0 8px;
-  text-decoration:none;
-  font-size:14px;
-}
-
-/* HERO */
-.hero{
-  height:100vh;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
-  padding:20px;
-}
-
-.hero h1{
-  font-size:2.5rem;
-}
-
-.hero h2{
-  font-size:1.2rem;
-  color:var(--s);
-}
-
-/* IMAGE FIX */
-img{
-  width:300px;
-  height:300px;
-  border-radius:50%;
-  display:block;
-  margin:20px auto;
-  box-shadow:0 0 40px rgb(7, 219, 251);
-  transition:0.3s;
-  max-width:90%;
-}
-
-img:hover{
-  transform:scale(1.05);
-  box-shadow:0 0 30px rgba(34,211,238,0.9);
-  border: 4px solid #22d3ee;
-}
-
-/* SECTIONS */
-section{
-  padding:60px 8%;
-}
-
-/* GRID RESPONSIVE */
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:15px;
-}
-
-/* CARD */
-.card{
-  background:var(--card);
-  padding:20px;
-  border-radius:16px;
-  backdrop-filter:blur(12px);
-  transition:0.3s;
-}
-
-.card:hover{
-  transform:translateY(-8px);
-  box-shadow:0 0 25px var(--s);
-}
-
-/* BUTTON */
-button{
-  padding:10px 15px;
-  border:none;
-  border-radius:10px;
-  background:linear-gradient(90deg,var(--p),var(--s));
-  color:white;
-  cursor:pointer;
-  transition:0.3s;
-}
-
-button:hover{
-  transform:scale(1.05);
-}
-
-/* TYPOGRAPHY FIX */
-h1,h2,h3{
-  word-break:break-word;
-}
-
-/* MOBILE FIX */
-@media (max-width:768px){
-
-  .hero h1{
-    font-size:2rem;
-  }
-
-  .hero h2{
-    font-size:1rem;
-  }
-
-  nav{
-    justify-content:center;
-  }
-
-  nav a{
-    font-size:12px;
-  }
-
-  img{
-    width:220px;
-    height:220px;
-  }
-}
-
-@media (max-width:480px){
-
-  section{
-    padding:50px 5%;
-  }
-
-  .hero h1{
-    font-size:1.6rem;
-  }
-
-  img{
-    width:180px;
-    height:180px;
-  }
-
-  .card{
-    padding:15px;
-  }
-}
+    /* ================= VARIABLES ================= */
+    :root{
+        --bg:#0a1020;
+        --text:#fff;
+        --card:rgba(255,255,255,0.06);
+        --primary:#7c3aed;
+        --secondary:#00ffae;
+    }
+
+   /* LIGHT MODE */
+    .light {
+        --bg: #f5f7ff;
+        --text: #0a1020;
+        --card: rgba(0,0,0,0.06);
+        --primary: #6d28d9;
+        --secondary: #0ea5e9;
+        --nav: rgba(255,255,255,0.6);
+        --shadow: rgba(0,0,0,0.1);
+    }
+
+    /* ================= BASE ================= */
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+        font-family:Arial, sans-serif;
+    }
+
+    body{
+        background:var(--bg);
+        color:var(--text);
+        overflow-x:hidden;
+        transition:0.4s;
+    }
+
+    /* ================= LOGO ================= */
+    .logo{
+        display:flex;
+        align-items:center;
+        gap:10px;
+        font-weight:bold;
+        font-size:18px;
+    }
+
+    .logo-box{
+        width:35px;
+        height:35px;
+        border-radius:10px;
+        background:linear-gradient(135deg,var(--primary),var(--secondary));
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        font-weight:bold;
+        color:white;
+        box-shadow:0 0 20px rgba(124,58,237,0.5);
+    }
+
+    /* ================= BACKGROUND CANVAS ================= */
+    #bgCanvas{
+        position:fixed;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        z-index:-3;
+    }
+
+    #matrix{
+        position:fixed;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        z-index:-2;
+    }
+
+    #particles-js{
+        position:fixed;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        z-index:-1;
+    }
+
+    /* ================= NAV ================= */
+    nav{
+        position:fixed;
+        top:0;
+        width:100%;
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        padding:12px 20px;
+        backdrop-filter:blur(15px);
+        background:rgba(0,0,0,0.3);
+        z-index:1000;
+        flex-wrap:wrap;
+    }
+
+    nav a{
+        color:var(--text);
+        text-decoration:none;
+        margin:0 10px;
+        font-size:14px;
+    }
+
+    .toggle{
+        cursor:pointer;
+        padding:6px 10px;
+        background:var(--card);
+        border-radius:8px;
+    }
+
+    /* ================= HERO ================= */
+    .hero{
+        height:100vh;
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+        text-align:center;
+        padding:20px;
+    }
+
+    .hero h1{
+        font-size:3rem;
+        color:var(--primary);
+    }
+
+    .hero h2{
+        color:var(--secondary);
+        margin:10px 0;
+    }
+
+    .typing{
+        border-right:2px solid var(--text);
+        white-space:nowrap;
+        overflow:hidden;
+        width:0;
+        animation:type 4s steps(40) infinite;
+    }
+
+    /* IMAGE */
+    img{
+        width:300px;
+        height:300px;
+        border-radius:50%;
+        display:block;
+        margin:20px auto;
+        box-shadow:0 0 40px var(--secondary);
+        transition:0.3s;
+        max-width:90%;
+    }
+
+    img:hover{
+        transform:scale(1.05);
+        box-shadow:0 0 30px var(--secondary);
+        border: 4px solid var(--secondary);
+    }
+
+    /* ================= SECTIONS ================= */
+    section{
+        padding:70px 10%;
+    }
+
+    /* GRID */
+    .grid{
+        display:grid;
+        grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+        gap:20px;
+    }
+
+    /* CARD */
+    .card{
+        background:var(--card);
+        padding:20px;
+        border-radius:15px;
+        transition:0.3s;
+    }
+
+    .card:hover{
+        transform:translateY(-8px);
+        box-shadow:0 0 20px var(--secondary);
+    }
+
+    
+    .light .card {  
+        border: 1px solid rgba(0,0,0,0.08);
+    }
+    /* BUTTON */
+    button{
+        padding:10px 15px;
+        border:none;
+        border-radius:8px;
+        background:linear-gradient(90deg,var(--primary),var(--secondary));
+        color:white;
+        cursor:pointer;
+        transition:1s;
+    }
+
+    button:hover{
+        transform:scale(1.05);
+        box-shadow:0 0 20px var(--secondary);
+    }
+    
+
+    /* LINKS */
+    a.link{
+        color:var(--secondary);
+        text-decoration:none;
+        font-size:14px;
+    }
+
+    /* FOOTER */
+    footer{
+        text-align:center;
+        padding:20px;
+    }
+
+    /* ================= RESPONSIVE ================= */
+    @media (max-width:768px){
+
+        .hero h1{
+            font-size:2rem;
+        }
+
+        .hero h2{
+            font-size:1rem;
+        }
+
+        nav{
+            justify-content:center;
+        }
+
+        nav a{
+            font-size:12px;
+        }
+
+        img{
+            width:220px;
+            height:220px;
+        }
+    }
+
+    @media (max-width:480px){
+
+        section{
+            padding:50px 5%;
+        }
+
+        .hero h1{
+            font-size:1.6rem;
+        }
+
+        img{
+            width:180px;
+            height:180px;
+        }
+
+        .card{
+            padding:15px;
+        }
+    }
 </style>
 </head>
 
 <body>
-<canvas id="matrix"></canvas>
-<div id="particles-js"></div>
-<!-- NAVBAR -->
-<nav>
+    <canvas id="bgCanvas"></canvas>
+    <canvas id="matrix"></canvas>
+    <div id="particles-js"></div>
+    <!-- NAVBAR -->
+    <nav>
+        <div class="logo">
+            <div class="logo-box">U</div>
+                Usman Rafaqat
+        </div>
+        
+        <div>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+            <span class="toggle" onclick="document.body.classList.toggle('light')">🌓</span>
+        </div>
+    </nav>
 
-  <div class="logo">
-    <div class="logo-box">U</div>
-    Usman Rafaqat
-  </div>
+    <!-- HERO -->
+    <div class="hero">
+        <h1>Usman Rafaqat</h1>
+        <h2>Python & Flask Developer</h2>
+        <div class="typing">Building modern full-stack applications...</div>
+    </div>
 
-  <div>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#github">GitHub</a>
-    <a href="#contact">Contact</a>
-    <span class="toggle" onclick="document.body.classList.toggle('light')">🌓</span>
-  </div>
+    <img src="image/e6b4d836-ab08-447c-a9bd-89cf05d36926.png" alt="Usman Rafaqat">
 
-</nav>
+    <!-- ABOUT -->
+    <section id="about">
+        <h2>About</h2><br>
+        <div class="card">
+            <p>My name is Usman Rafaqat, and I am a Python & Flask developer focused on building real-world full-stack applications using MongoDB, APIs, and modern web technologies. I have a passion for creating efficient and scalable web applications that solve real problems. With experience in both frontend and backend development, I enjoy working on projects that allow me to utilize my skills in Python, Flask, and MongoDB to deliver high-quality solutions. I am constantly learning and exploring new technologies to stay up-to-date with the latest trends in web development. My goal is to contribute to impactful projects and collaborate with like-minded developers to create innovative applications that make a difference.</p>
+        </div>
+    </section>
 
-<!-- HERO -->
-<div class="hero">
-  <h1>Usman Rafaqat</h1>
-  <h2>Python Developer | Flask Developer</h2>
-  <div class="typing">Building modern full-stack applications...</div>
-</div>
-<img src="image/e6b4d836-ab08-447c-a9bd-89cf05d36926.png" alt="Usman Rafaqat">
-<!-- ABOUT -->
-<section id="about" class="hidden">
-<h2>About Me</h2>
-<br><br>
-<div class="card">
-  <p>My name is Usman Rafaqat, and I am a Python & Flask developer focused on building real-world full-stack applications using MongoDB, APIs, and modern web technologies. I have a passion for creating efficient and scalable web applications that solve real problems. With experience in both frontend and backend development, I enjoy working on projects that allow me to utilize my skills in Python, Flask, and MongoDB to deliver high-quality solutions. I am constantly learning and exploring new technologies to stay up-to-date with the latest trends in web development. My goal is to contribute to impactful projects and collaborate with like-minded developers to create innovative applications that make a difference.</p>
-</div>
-</section>
+    <!-- SKILLS -->
+    <section id="skills" class="hidden">
+        <h2>Skills & Learning</h2>
+        <br><br>
+        <div class="grid">
 
-<!-- SKILLS -->
-<section id="skills" class="hidden">
-<h2>Skills & Learning</h2>
-<br><br>
-<div class="grid">
+        <div class="card">
+            <h3>HTML</h3>
+            <a class="link" href="https://www.w3schools.com/html/" target="_blank">Learn HTML</a>
+        </div>
 
-<div class="card">
-<h3>HTML</h3>
-<a class="link" href="https://www.w3schools.com/html/" target="_blank">Learn HTML</a>
-</div>
+        <div class="card">
+            <h3>CSS</h3>
+            <a class="link" href="https://www.w3schools.com/css/" target="_blank">Learn CSS</a>
+        </div>
 
-<div class="card">
-<h3>CSS</h3>
-<a class="link" href="https://www.w3schools.com/css/" target="_blank">Learn CSS</a>
-</div>
+        <div class="card">
+            <h3>JavaScript</h3>
+            <a class="link" href="https://www.w3schools.com/js/" target="_blank">Learn JS</a>
+        </div>
 
-<div class="card">
-<h3>JavaScript</h3>
-<a class="link" href="https://www.w3schools.com/js/" target="_blank">Learn JS</a>
-</div>
+        <div class="card">
+            <h3>Flask</h3>
+            <a class="link" href="https://flask.palletsprojects.com/" target="_blank">Flask Docs</a>
+        </div>
 
-<div class="card">
-<h3>Flask</h3>
-<a class="link" href="https://flask.palletsprojects.com/" target="_blank">Flask Docs</a>
-</div>
+        <div class="card">
+            <h3>MongoDB</h3>
+            <a class="link" href="https://www.mongodb.com/docs/" target="_blank">MongoDB Docs</a>
+        </div>
 
-<div class="card">
-<h3>MongoDB</h3>
-<a class="link" href="https://www.mongodb.com/docs/" target="_blank">MongoDB Docs</a>
-</div>
+        <div class="card">
+            <h3>Python</h3>
+            <a class="link" href="https://www.w3schools.com/python/" target="_blank">Learn Python</a>
+        </div>
 
-<div class="card">
-<h3>Python</h3>
-<a class="link" href="https://www.w3schools.com/python/" target="_blank">Learn Python</a>
-</div>
+        </div>
+    </section>
 
-</div>
-</section>
+    <!-- PROJECTS -->
+    <section id="projects" class="hidden">
+        <h2>Projects</h2>
+        <br><br>
+        <div class="grid">
 
-<!-- PROJECTS -->
-<section id="projects" class="hidden">
-<h2>Projects</h2>
-<br><br>
-<div class="grid">
+            <div class="card">
+                <h3>Student Management System</h3>
+                <p>Manage students efficiently with web app.</p>
+                <br>
+                <a href="https://dalmia.vercel.app" target="_blank">
+                    <button>Live Demo</button>
+                </a>
+            </div>
 
-<div class="card">
-<h3>Student Management System</h3>
-<p>Manage students efficiently with web app.</p>
-<br>
-<a href="https://usmanrafaqat67-ship-it.github.io/pro2/" target="_blank">
-<button>Live Demo</button>
-</a>
-</div>
+            <div class="card">
+                <h3>SecureLAN</h3>
+                <p>MAC address based LAN security system.</p>
+                <br>
+                <a href="https://securelan.vercel.app" target="_blank">
+                    <button>Live Demo</button>
+                </a>
+            </div>
 
-<div class="card">
-<h3>SecureLAN</h3>
-<p>MAC address based LAN security system.</p>
-<br>
-<a href="https://securelan.vercel.app" target="_blank">
-<button>Live Demo</button>
-</a>
-</div>
+        </div>
+    </section>
 
-</div>
-</section>
+    <!-- CONTACT -->
+    <section id="contact">
+        <h2>Contact</h2><br>
+        <div class="card">
+            Email: usmanrafaqat67@gmail.com<br><br>
+            <button>Send Email</button>
+        </div>
+    </section>
 
-<!-- GITHUB -->
-<section id="github" class="hidden">
-<h2>GitHub</h2>
-<br>
-<div class="card">
-<p>My GitHub Profile:</p>
-<br>
-<a href="https://github.com/" target="_blank">
-<button><i class="fab fa-github"></i> View My GitHub</button>
-</a>
+    <!-- FOOTER -->
+    <footer>
+        © 2026 Usman Rafaqat | Professional Portfolio
+    </footer>
 
-</div>
-</section>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+    <script>
+        /* ================= THEME ================= */
+        function toggleTheme(){
+        document.body.classList.toggle("light");
+        }
 
-<!-- CONTACT -->
-<section id="contact" class="hidden">
-<h2>Contact</h2>
-<br>
-<div class="card">
-<p>Email: usmanrafaqat67@gmail.com</p>
-<br>
-<a href="mailto:usmanrafaqat67@gmail.com">
-<button>Connect With Me</button>
-</a>
-</div>
-</section>
+        /* ================= PARTICLE BACKGROUND ================= */
+        const canvas = document.getElementById("bgCanvas");
+        const ctx = canvas.getContext("2d");
 
-<!-- FOOTER -->
-<footer>
-© 2026 Usman Rafaqat | Professional Portfolio
-</footer>
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
 
-<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+        let particles = [];
 
-<script>
-// PARTICLES
-particlesJS("particles-js", {
-  particles:{
-    number:{value:80},
-    color:{value:"#00f0ff"},
-    line_linked:{enable:true,color:"#7c3aed"},
-    move:{speed:2}
-  }
-});
+        for(let i=0;i<80;i++){
+            particles.push({
+                x:Math.random()*canvas.width,
+                y:Math.random()*canvas.height,
+                r:Math.random()*3,
+                dx:(Math.random()-0.5)*1,
+                dy:(Math.random()-0.5)*1
+            });
+        }
 
-// MATRIX
-const canvas=document.getElementById("matrix");
-const ctx=canvas.getContext("2d");
+        function animate(){
+            ctx.clearRect(0,0,canvas.width,canvas.height);
 
-canvas.width=window.innerWidth;
-canvas.height=window.innerHeight;
+            ctx.fillStyle="rgba(0,255,174,0.5)";
 
-const letters="01ABCDEF";
-const fontSize=14;
-const columns=canvas.width/fontSize;
+        particles.forEach(p=>{
+            ctx.beginPath();
+            ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+            ctx.fill();
 
-const drops=Array(Math.floor(columns)).fill(1);
+            p.x += p.dx;
+            p.y += p.dy;
 
-function draw(){
-  ctx.fillStyle="rgba(0,0,0,0.05)";
-  ctx.fillRect(0,0,canvas.width,canvas.height);
+            if(p.x < 0 || p.x > canvas.width) p.dx *= -1;
+            if(p.y < 0 || p.y > canvas.height) p.dy *= -1;
+        });
 
-  ctx.fillStyle="#00ffcc";
-  ctx.font=fontSize+"px monospace";
+        requestAnimationFrame(animate);
+        }
 
-  drops.forEach((y,i)=>{
-    const text=letters[Math.floor(Math.random()*letters.length)];
-    ctx.fillText(text,i*fontSize,y*fontSize);
+        animate();
 
-    if(y*fontSize>canvas.height && Math.random()>0.975){
-      drops[i]=0;
-    }
-    drops[i]++;
-  });
-}
+        window.addEventListener("resize",()=>{
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        });
 
-setInterval(draw,33);
+        // PARTICLES
+        particlesJS("particles-js", {
+        particles:{
+            number:{value:80},
+            color:{value:"#00f0ff"},
+            line_linked:{enable:true,color:"#7c3aed"},
+            move:{speed:2}
+        }
+        });
 
-window.addEventListener("resize",()=>{
-  canvas.width=window.innerWidth;
-  canvas.height=window.innerHeight;
-});
-document.querySelectorAll(".card").forEach(card=>{
-  card.addEventListener("mousemove",(e)=>{
-    let x = e.offsetX;
-    let y = e.offsetY;
-    let centerX = card.offsetWidth / 2;
-    let centerY = card.offsetHeight / 2;
+        MATRIX
+        const matrixCanvas = document.getElementById("matrix");
+        const matrixCtx = matrixCanvas.getContext("2d");
 
-    let rotateX = (y - centerY) / 10;
-    let rotateY = (centerX - x) / 10;
+        const letters = "01ABCDEF";
+        const fontSize = 14;
+        let drops = [];
 
-    card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-  });
+        function resetMatrix(){
+            matrixCanvas.width = window.innerWidth;
+            matrixCanvas.height = window.innerHeight;
+            const columns = Math.floor(matrixCanvas.width / fontSize);
+            drops = Array(columns).fill(1);
+        }
 
-  card.addEventListener("mouseleave",()=>{
-    card.style.transform = "rotateX(0) rotateY(0)";
-  });
-});
-  
-// SCROLL REVEAL
-const observer = new IntersectionObserver(entries=>{
-  entries.forEach(entry=>{
-    if(entry.isIntersecting){
-      entry.target.classList.add("show");
-    }
-  });
-});
+        function draw(){
+        matrixCtx.fillStyle = "rgba(0,0,0,0.05)";
+        matrixCtx.fillRect(0,0,matrixCanvas.width,matrixCanvas.height);
 
-document.querySelectorAll(".hidden").forEach(el=>{
-  observer.observe(el);
-});
-</script>
+        matrixCtx.fillStyle = "#00ffcc";
+        matrixCtx.font = fontSize + "px monospace";
+
+        drops.forEach((y,i)=>{
+            const text = letters[Math.floor(Math.random()*letters.length)];
+            matrixCtx.fillText(text, i * fontSize, y * fontSize);
+
+            if(y * fontSize > matrixCanvas.height && Math.random() > 0.975){
+                drops[i] = 0;
+            }
+            drops[i]++;
+        });
+        }
+
+        resetMatrix();
+        setInterval(draw,33);
+
+        window.addEventListener("resize",()=>{
+            resetMatrix();
+        });
+        document.querySelectorAll(".card").forEach(card=>{
+        card.addEventListener("mousemove",(e)=>{
+            let x = e.offsetX;
+            let y = e.offsetY;
+            let centerX = card.offsetWidth / 2;
+            let centerY = card.offsetHeight / 2;
+
+            let rotateX = (y - centerY) / 10;
+            let rotateY = (centerX - x) / 10;
+
+            card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+        });
+
+        card.addEventListener("mouseleave",()=>{
+                card.style.transform = "rotateX(0) rotateY(0)";
+            });
+        });
+
+        // SCROLL REVEAL
+        const observer = new IntersectionObserver(entries=>{
+            entries.forEach(entry=>{
+                if(entry.isIntersecting){
+                    entry.target.classList.add("show");
+                }
+            });
+        });
+
+        document.querySelectorAll(".hidden").forEach(el=>{
+            observer.observe(el);
+        });
+    </script>
 
 </body>
 </html>
