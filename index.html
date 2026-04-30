@@ -287,7 +287,7 @@
         cursor: pointer;
     }
 
-    /* ================= RESPONSIVE ================= */
+     /* ================= RESPONSIVE ================= */
     @media (max-width:768px){
 
         .hero h1{
@@ -300,6 +300,7 @@
 
         nav{
             justify-content:center;
+            text-align:center;
         }
 
         nav a{
@@ -310,26 +311,45 @@
             width:220px;
             height:220px;
         }
-    }
-
-    @media (max-width:480px){
 
         section{
             padding:50px 5%;
         }
+    }
 
-        .hero h1{
-            font-size:1.6rem;
-        }
+    /* MOBILE */
+    @media (max-width:480px){
 
-        img{
-            width:180px;
-            height:180px;
-        }
+      .hero h1{
+        font-size:1.6rem;
+      }
 
-        .card{
-            padding:15px;
-        }
+      .hero h2{
+        font-size:0.9rem;
+      }
+
+      nav{
+        flex-direction:column;
+        align-items:center;
+      }
+
+      nav a{
+        margin:5px;
+        font-size:12px;
+      }
+
+      img{
+        width:180px;
+        height:180px;
+      }
+
+      .card{
+        padding:15px;
+      }
+
+      .grid{
+        grid-template-columns:1fr;
+      }
     }
 </style>
 </head>
