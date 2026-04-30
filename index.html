@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Usman Rafaqat | Portfolio</title>
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <style>
     /* ================= VARIABLES ================= */
     :root{
@@ -133,11 +133,11 @@
 
     .hero h1{
         font-size:3rem;
-        color:var(--primary);
+        color:var(--secondary);
     }
 
     .hero h2{
-        color:var(--secondary);
+        color:var(--primary);
         margin:10px 0;
     }
 
@@ -147,6 +147,34 @@
         overflow:hidden;
         width:0;
         animation:type 4s steps(40) infinite;
+    }
+
+    /* ANIMATIONS */
+    @keyframes float{
+        0%{
+            transform:translateY(0);
+            box-shadow:0 0 20px rgba(0,0,0,0.2);
+        }
+        50%{
+            transform:translateY(-10px);
+            box-shadow:0 10px 20px rgba(0,0,0,0.2);
+        }
+        100%{
+            transform:translateY(0);
+            box-shadow:0 0 20px rgba(0,0,0,0.2);
+        }
+    }
+
+    @keyframes type{
+        0%{
+            width:0;
+        }
+        50%{
+            width:100%;
+        }
+        100%{
+            width:0;
+        }
     }
 
     /* IMAGE */
@@ -224,6 +252,8 @@
     footer{
         text-align:center;
         padding:20px;
+        background:var(--card);
+        border-bottom: 2px solid var(--secondary);
     }
 
     /* ================= RESPONSIVE ================= */
@@ -277,6 +307,7 @@
     <canvas id="bgCanvas"></canvas>
     <canvas id="matrix"></canvas>
     <div id="particles-js"></div>
+
     <!-- NAVBAR -->
     <nav>
         <div class="logo">
@@ -296,23 +327,23 @@
     <!-- HERO -->
     <div class="hero">
         <h1>Usman Rafaqat</h1>
-        <h2>Python & Flask Developer</h2>
-        <div class="typing">Building modern full-stack applications...</div>
+        <h2>Python Developer | Flask Developer</h2>
+        <div class="typing">Building modern full-stack applications ...</div>
     </div>
 
     <img src="image/e6b4d836-ab08-447c-a9bd-89cf05d36926.png" alt="Usman Rafaqat">
 
     <!-- ABOUT -->
     <section id="about">
-        <h2>About</h2><br>
+        <h2 style="text-align: center;">About</h2><br>
         <div class="card">
-            <p>My name is Usman Rafaqat, and I am a Python & Flask developer focused on building real-world full-stack applications using MongoDB, APIs, and modern web technologies. I have a passion for creating efficient and scalable web applications that solve real problems. With experience in both frontend and backend development, I enjoy working on projects that allow me to utilize my skills in Python, Flask, and MongoDB to deliver high-quality solutions. I am constantly learning and exploring new technologies to stay up-to-date with the latest trends in web development. My goal is to contribute to impactful projects and collaborate with like-minded developers to create innovative applications that make a difference.</p>
+            <p style="text-align: justify;">My name is Usman Rafaqat, and I am a Python & Flask developer focused on building real-world full-stack applications using MongoDB, APIs, and modern web technologies. I have a passion for creating efficient and scalable web applications that solve real problems. With experience in both frontend and backend development, I enjoy working on projects that allow me to utilize my skills in Python, Flask, and MongoDB to deliver high-quality solutions. I am constantly learning and exploring new technologies to stay up-to-date with the latest trends in web development. My goal is to contribute to impactful projects and collaborate with like-minded developers to create innovative applications that make a difference.</p>
         </div>
     </section>
 
     <!-- SKILLS -->
     <section id="skills" class="hidden">
-        <h2>Skills & Learning</h2>
+        <h2 style="text-align: center;">Skills & Learning</h2>
         <br><br>
         <div class="grid">
 
@@ -351,25 +382,29 @@
 
     <!-- PROJECTS -->
     <section id="projects" class="hidden">
-        <h2>Projects</h2>
+        <h2 style="text-align: center;">Projects</h2>
         <br><br>
         <div class="grid">
 
             <div class="card">
-                <h3>Student Management System</h3>
-                <p>Manage students efficiently with web app.</p>
+                <h3 style="color: #00ffae; text-align: center;">Student Management System</h3>
+                <p>A full-stack student management system built with Flask and MongoDB, featuring user authentication, CRUD operations, and a responsive design.</p>
                 <br>
                 <a href="https://dalmia.vercel.app" target="_blank">
-                    <button>Live Demo</button>
+                    <center>
+                        <button>Live Demo</button>
+                    </center>
                 </a>
             </div>
 
             <div class="card">
-                <h3>SecureLAN</h3>
-                <p>MAC address based LAN security system.</p>
+                <h3 style="color: #00ffae; text-align: center;">SecureLAN</h3>
+                <p>A secure local area network (LAN) application built with Flask, designed to facilitate encrypted communication and file sharing between devices on the same network.</p>
                 <br>
-                <a href="https://securelan.vercel.app" target="_blank">
-                    <button>Live Demo</button>
+                <a href="https://usmanrafaqat67-ship-it.github.io/pro2/" target="_blank">
+                    <center>
+                        <button>Live Demo</button>
+                    </center>
                 </a>
             </div>
 
@@ -377,11 +412,14 @@
     </section>
 
     <!-- CONTACT -->
-    <section id="contact">
+    <section id="contact" style="text-align: center;">
         <h2>Contact</h2><br>
-        <div class="card">
+        <div class="card" style="text-align:center;">
+            <i class="fa-regular fa-envelope"></i>
             Email: usmanrafaqat67@gmail.com<br><br>
-            <button>Send Email</button>
+            <center>
+                <button>Send Email</button>
+            </center>
         </div>
     </section>
 
