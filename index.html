@@ -4,67 +4,44 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Usman Rafaqat | Portfolio</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 <style>
-    /* ================= VARIABLES ================= */
-    :root{
-        --bg:#0a1020;
-        --text:#fff;
-        --card:rgba(255,255,255,0.06);
-        --primary:#7c3aed;
-        --secondary:#00ffae;
-    }
+:root{
+  --bg:#0a1020;
+  --card:rgba(255,255,255,0.08);
+  --text:#ffffff;
+  --p:#7c3aed;
+  --s:#22d3ee;
+}
 
-   /* LIGHT MODE */
-    .light {
-        --bg: #f5f7ff;
-        --text: #0a1020;
-        --card: rgba(0,0,0,0.06);
-        --primary: #6d28d9;
-        --secondary: #0ea5e9;
-        --nav: rgba(255,255,255,0.6);
-        --shadow: rgba(0,0,0,0.1);
-    }
+/* LIGHT MODE */
+.light{
+  --bg:#f5f7ff;
+  --card:rgba(0,0,0,0.06);
+  --text:#0a1020;
+  --p:#7c3aed;
+  --s:#22d3ee;
+}
 
-    /* ================= BASE ================= */
-    *{
-        margin:0;
-        padding:0;
-        box-sizing:border-box;
-        font-family:Arial, sans-serif;
-    }
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, sans-serif;
+}
 
-    body{
-        background:var(--bg);
-        color:var(--text);
-        overflow-x:hidden;
-        transition:0.4s;
-    }
+body{
+  background:var(--bg);
+  color:var(--text);
+  overflow-x:hidden;
+  scroll-behavior:smooth;
+  transition:0.4s;
+}
 
-    /* ================= LOGO ================= */
-    .logo{
-        display:flex;
-        align-items:center;
-        gap:10px;
-        font-weight:bold;
-        font-size:18px;
-    }
-
-    .logo-box{
-        width:35px;
-        height:35px;
-        border-radius:10px;
-        background:linear-gradient(135deg,var(--primary),var(--secondary));
-        display:flex;
-        align-items:center;
-        justify-content:center;
-        font-weight:bold;
-        color:white;
-        box-shadow:0 0 20px rgba(124,58,237,0.5);
-    }
-
-    /* ================= BACKGROUND CANVAS ================= */
-    #bgCanvas{
+ /* ================= BACKGROUND CANVAS ================= */
+ #bgCanvas{
         position:fixed;
         top:0;
         left:0;
@@ -91,464 +68,839 @@
         z-index:-1;
     }
 
-    /* ================= NAV ================= */
-    nav{
-        position:fixed;
-        top:0;
-        width:100%;
-        display:flex;
-        justify-content:space-between;
-        align-items:center;
-        padding:12px 20px;
-        backdrop-filter:blur(15px);
-        background:rgba(0,0,0,0.3);
-        z-index:1000;
-        flex-wrap:wrap;
-    }
+/* ================= LOGO ================= */
+.logo{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-weight:bold;
+  font-size:18px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid var(--s);
+  box-shadow: 0 0 10px var(--s);
+  background: var(--card);
+  backdrop-filter: blur(12px);
+  transition: 0.4s;
+  transform-style: preserve-3d;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  text-align: center;
+  width: 50%;
+  height: 50%;
+  background: linear-gradient(135deg, var(--p), var(--s));
+  backdrop-filter:blur(12px);
+  transition:0.4s;
+  transform-style:preserve-3d;
+  box-shadow:0 10px 30px rgba(0,0,0,0.3);
+}
+.logo:hover{
+  width: 50%;
+  height: 50%;
+  background: linear-gradient(135deg, var(--p), var(--s));
+  backdrop-filter:blur(12px);
+  transition:0.4s;
+  transform-style:preserve-3d;
+  box-shadow:0 10px 30px rgba(0,0,0,0.3);
+}
 
-    nav a{
-        color:var(--text);
-        text-decoration:none;
-        margin:0 10px;
-        font-size:14px;
-    }
+.logo-box{
+  width:35px;
+  height:35px;
+  border-radius:10px;
+  background:linear-gradient(135deg,var(--p),var(--s));
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:bold;
+  color:white;
+  box-shadow:0 0 20px rgba(124,58,237,0.5);
+  /* width: 50%; */
+  /* height: 50%; */
+  background: linear-gradient(135deg, var(--p), var(--s));
+  backdrop-filter:blur(12px);
+  transition:0.4s;
+  transform-style:preserve-3d;
+  box-shadow:0 10px 30px rgba(0,0,0,0.3);
+  border-radius:10px;
+  border:1px solid var(--s);
+  box-shadow:0 0 10px var(--s);
+  background:var(--card);
+  backdrop-filter:blur(12px);
+  transition:0.4s;
+  transform-style:preserve-3d;
+  box-shadow:0 10px 30px rgba(0,0,0,0.3);
+}
 
-    .toggle{
-        cursor:pointer;
-        padding:6px 10px;
-        background:var(--card);
-        border-radius:8px;
-    }
+.logo-box:hover{
+  width: 30%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--p), var(--s));
+  backdrop-filter:blur(12px);
+  transition:0.4s;
+  transform-style:preserve-3d;
+  box-shadow:0 10px 30px rgba(0,0,0,0.3);
+  border-radius:10px;
+  border:1px solid var(--s);
+  box-shadow:0 0 10px var(--s);
+  background:var(--card);
+  backdrop-filter:blur(12px);
+  transition:0.4s;
+  transform-style:preserve-3d;
+  box-shadow:0 10px 30px rgba(0,0,0,0.3);
+  text-align:center;
+  color:var(--text);
+  padding: 5px;
+}
 
-    /* ================= HERO ================= */
-    .hero{
-        height:100vh;
-        display:flex;
-        flex-direction:column;
-        justify-content:center;
-        align-items:center;
-        text-align:center;
-        padding:20px;
-    }
+.logo-box,
+.logo-box:hover{
+  width:35px !important;
+  height:35px !important;
+  min-width:35px;
+  min-height:35px;
+  padding:0 !important;
+}
 
-    .hero h1{
-        font-size:3rem;
-        color:var(--secondary);
-    }
+.logo{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
 
-    .hero h2{
-        color:var(--primary);
-        margin:10px 0;
-    }
+/* NAVBAR */
+nav{
+  position:fixed;
+  top:0;
+  width:100%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 25px;
+  backdrop-filter:blur(15px);
+  background:rgba(0,0,0,0.25);
+  z-index:1000;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid var(--s);
+  box-shadow: 0 0 10px var(--s);
+  background: var(--card);
+  backdrop-filter: blur(12px);
+  transition: 0.4s;
+  transform-style: preserve-3d;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  text-align: center;
+  /* width: 50%; */
+  /* height: 50%; */
+  background: linear-gradient(135deg, var(--p), var(--s));
+  backdrop-filter:blur(12px);
+  transition:0.4s;
+  transform-style:preserve-3d;
+  box-shadow:0 10px 30px rgba(0,0,0,0.3);
+}
 
-    .typing{
-        border-right:2px solid var(--text);
-        white-space:nowrap;
-        overflow:hidden;
-        width:0;
-        animation:type 4s steps(40) infinite;
-    }
+nav a{
+  color:var(--text);
+  margin:0 10px;
+  text-decoration:none;
+  transition:0.3s;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid var(--s);
+  box-shadow: 0 0 10px var(--s);
+  background: var(--card);
+  backdrop-filter: blur(12px);
+  transition: 0.4s;
+  transform-style: preserve-3d;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  text-align: center;
+  width: 50%;
+  height: 50%;
+  background: linear-gradient(135deg, var(--p), var(--s));
+}
+nav a:hover{
+  color:var(--s);
+  width: 50%;
+  height: 50%;
+  background: linear-gradient(135deg, var(--p), var(--s));
+  backdrop-filter:blur(12px);
+  transition:0.4s;
+  transform-style:preserve-3d;
+  box-shadow:0 10px 30px rgba(0,0,0,0.3);
+  border-radius:10px;
+  border:1px solid var(--s);
+  box-shadow:0 0 10px var(--s);
+  background:var(--card);
+  backdrop-filter:blur(12px);
+  transition:0.4s;
+  transform-style:preserve-3d;
+  box-shadow:0 10px 30px rgba(0,0,0,0.3);
+  text-align:center;
+  padding: 10px;
+}
 
-    /* ANIMATIONS */
-    @keyframes float{
-        0%{
-            transform:translateY(0);
-            box-shadow:0 0 20px rgba(0,0,0,0.2);
-        }
-        50%{
-            transform:translateY(-10px);
-            box-shadow:0 10px 20px rgba(0,0,0,0.2);
-        }
-        100%{
-            transform:translateY(0);
-            box-shadow:0 0 20px rgba(0,0,0,0.2);
-        }
-    }
+.toggle{
+  cursor:pointer;
+  padding:6px 10px;
+  background:var(--card);
+  border-radius:8px;
+  width: 50%;
+  height: 50%;
+  background: linear-gradient(135deg, var(--p), var(--s));
+  backdrop-filter:blur(12px);
+  transition:0.4s;
+  transform-style:preserve-3d;
+  box-shadow:0 10px 30px rgba(0,0,0,0.3);
+  border-radius:10px;
+  border:1px solid var(--s);
+  box-shadow:0 0 10px var(--s);
+  background:var(--card);
+  backdrop-filter:blur(12px);
+  transition:0.4s;
+  transform-style:preserve-3d;
+  box-shadow:0 10px 30px rgba(0,0,0,0.3);
+  text-align:center;
+  padding: 10px;
+}
 
-    @keyframes type{
-        0%{
-            width:0;
-        }
-        50%{
-            width:100%;
-        }
-        100%{
-            width:0;
-        }
-    }
+.toggle:hover{
+  width: 50%;
+  height: 50%;
+  background: linear-gradient(135deg, var(--p), var(--s));
+  backdrop-filter:blur(12px);
+  transition:0.4s;
+  transform-style:preserve-3d;
+  box-shadow:0 10px 30px rgba(0,0,0,0.3);
+}
 
-    /* IMAGE */
-    img{
-        width:300px;
-        height:300px;
-        border-radius:50%;
-        display:block;
-        margin:20px auto;
-        box-shadow:0 0 40px var(--secondary);
-        transition:0.3s;
-        max-width:90%;
-    }
+.toggle{
+  width:auto !important;
+  height:auto !important;
+  padding:6px 10px !important;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  flex-shrink:0;
+}
 
-    img:hover{
-        transform:scale(1.05);
-        box-shadow:0 0 30px var(--secondary);
-        border: 4px solid var(--secondary);
-    }
+.toggle:hover{
+  width:auto !important;
+  height:auto !important;
+}
 
-    /* ================= SECTIONS ================= */
-    section{
-        padding:70px 10%;
-    }
+/* HERO */
+.hero{
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
 
-    /* GRID */
-    .grid{
-        display:grid;
-        grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-        gap:20px;
-    }
+.hero h1{
+  font-size:3rem;
+  animation:float 4s infinite ease-in-out;
+  text-align:center;
+  margin-top:10px;
+  margin-bottom:10px;
+  margin-left:10px;
+  margin-right:10px;
+  padding:10px;
+  border-radius:10px;
+  border:1px solid var(--s);
+  box-shadow:0 0 10px var(--s);
+  background:var(--card);
+  backdrop-filter:blur(12px);
+  transition:0.4s;
+  transform-style:preserve-3d;
+  transform:rotateX(8deg) rotateY(8deg) translateY(-10px);
+  box-shadow:0 10px 30px rgba(0,0,0,0.3);
+  text-align:center;
+  width: 50%;
+}
 
-    /* CARD */
-    .card{
-        background:var(--card);
-        padding:20px;
-        border-radius:15px;
-        transition:0.3s;
-    }
+.hero h1:hover{
+  width: 50%;
+  height: 20%;
+  background: linear-gradient(135deg, var(--p), var(--s));
+  backdrop-filter:blur(12px);
+  transition:0.4s;
+  transform-style:preserve-3d;
+  box-shadow:0 10px 30px rgba(0,0,0,0.3);
+}
 
-    .card:hover{
-        transform:translateY(-8px);
-        box-shadow:0 0 20px var(--secondary);
-    }
+.hero h2{
+  color:var(--s);
+  font-size:1.5rem;
+  animation:float 4s infinite ease-in-out;
+  text-align:center;
+  margin-top:10px;
+  margin-bottom:10px;
+  margin-left:10px;
+  margin-right:10px;
+  padding:10px;
+  border-radius:10px;
+  border:1px solid var(--s);
+  box-shadow:0 0 10px var(--s);
+  background:var(--card);
+  backdrop-filter:blur(12px);
+  transition:0.4s;
+  transform-style:preserve-3d;
+  transform:rotateX(8deg) rotateY(8deg) translateY(-10px);
+  box-shadow:0 10px 30px rgba(0,0,0,0.3);
+  width: 50%;
+}
 
-    
-    .light .card {  
-        border: 1px solid rgba(0,0,0,0.08);
-    }
-    /* BUTTON */
-    button{
-        padding:10px 15px;
-        border:none;
-        border-radius:8px;
-        background:linear-gradient(90deg,var(--primary),var(--secondary));
-        color:white;
-        cursor:pointer;
-        transition:1s;
-    }
+.hero h2:hover{
+  width: 50%;
+  height: 20%;
+  background: linear-gradient(135deg, var(--p), var(--s));
+  backdrop-filter:blur(12px);
+  transition:0.4s;
+  transform-style:preserve-3d;
+  box-shadow:0 10px 30px rgba(0,0,0,0.3);
+}
 
-    button:hover{
-        transform:scale(1.05);
-        box-shadow:0 0 20px var(--secondary);
-    }
-    
+.typing{
+  border-right:2px solid var(--text);
+  white-space:nowrap;
+  overflow:hidden;
+  width:0;
+  animation:type 4s steps(40) infinite;
+  text-align:center;
+  margin-top:10px;
+  margin-bottom:10px;
+  margin-left:10px;
+  margin-right:10px;
+  padding:10px;
+  border-radius:10px;
+  border:1px solid var(--s);
+  box-shadow:0 0 10px var(--s);
+  background:var(--card);
+  backdrop-filter:blur(12px);
+  transition:0.4s;
+  transform-style:preserve-3d;
+  box-shadow:0 10px 30px rgba(0,0,0,0.3);
+}
 
-    /* LINKS */
-    a.link{
-        color:var(--secondary);
-        text-decoration:none;
-        font-size:14px;
-    }
+.img img{
+  width:200px;
+  height:200px; 
+  border-radius:50%; 
+  border:5px solid var(--s); 
+  box-shadow:0 0 20px var(--s); 
+  margin-top:20px; 
+  margin-bottom:30px;
+}
 
-    .profile-img{
-        width:150px;
-        height:150px;
-        border-radius:50%;
-        display:block;
-        margin:20px auto;
-        box-shadow:0 0 30px var(--secondary);
-    }
+.img img:hover{
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: 5px solid var(--s);
+  box-shadow: 0 0 20px var(--s);
+  transition: all 1s ease-in-out;
+} 
 
-    pre{
-        color:var(--text);
-        font-family: 'Courier New', Courier, monospace;
-        text-align: center;
-        padding:20px;
-    }
+.img p{
+  color: var(--s); 
+  font-size: large; 
+  width: 20%; 
+  background:linear-gradient(90deg,var(--p),var(--s)); 
+  padding:10px; border:1px solid var(--s); 
+  border-radius: 10px; 
+  box-shadow:0 0 10px var(--s); 
+  backdrop-filter:blur(12px); 
+  transition:0.4s; 
+  transform-style:preserve-3d; 
+  box-shadow:0 10px 30px rgba(0,0,0,0.3);
+}
 
-    pre a{
-        color:var(--secondary);
-        text-decoration:none;
-        margin:0 10px;
-        font-size:14px;
-    }
+/* SECTIONS */
+section{
+  padding:80px 10%;
+  text-align:center;
+  margin-top:10px;
+  margin-bottom:10px;
+  margin-left:10px;
+  margin-right:10px;
+  padding:10px;
+  border-radius:10px;
+  border:1px solid var(--s);
+  box-shadow:0 0 10px var(--s);
+  background:var(--card);
+  backdrop-filter:blur(12px);
+  transition:0.4s;
+  transform-style:preserve-3d;
+  box-shadow:0 10px 30px rgba(0,0,0,0.3);
+}
 
-    /* FOOTER */
-    footer{
-        text-align:center;
-        padding:20px;
-        background:var(--card);
-        border-bottom: 2px solid var(--secondary);
-    }
+/* GLASS CARD */
+.card{
+  background:var(--card);
+  padding:20px;
+  border-radius:16px;
+  backdrop-filter:blur(12px);
+  transition:0.4s;
+  transform-style:preserve-3d;
+  text-align:center;
+  margin-top:20px;
+  margin-bottom:10px;
+  margin-left:10px;
+  margin-right:10px;
+  border:1px solid var(--s);
+  box-shadow:0 0 10px var(--s);
+  backdrop-filter:blur(12px);
+  box-shadow:0 10px 30px rgba(0,0,0,0.3);
+}
 
-    footer a{
-        color:var(--secondary);
-        text-decoration:none;
-        margin:0 10px;
-        font-size:14px;
-        cursor: pointer;
-    }
+.card:hover{
+  transform:rotateX(8deg) rotateY(8deg) translateY(-10px);
+  box-shadow:0 10px 30px rgba(0,0,0,0.3);
+  background: var(--card);
+  backdrop-filter:blur(12px);
+  transition:0.4s;
+  transform-style:preserve-3d;
+  box-shadow:0 10px 30px rgba(0,0,0,0.3);
+  text-align:center;
+  padding: 10px;
+  border-radius:10px;
+  border:1px solid var(--s);
+  box-shadow:0 0 10px var(--s);
+  background:var(--card);
+  backdrop-filter:blur(12px);
+  transition:0.4s;
+  transform-style:preserve-3d;
+  box-shadow:0 10px 30px rgba(0,0,0,0.3);
+}
 
-    
-    /* ================= RESPONSIVE ================= */
-    @media (max-width:768px){
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+  background: var(--card);
+  backdrop-filter:blur(12px);
+  transition:0.4s;
+  transform-style:preserve-3d;
+  box-shadow:0 10px 30px rgba(0,0,0,0.3);
+  text-align:center;
+  padding: 10px;
+  border-radius:10px;
+  border:1px solid var(--s);
+  box-shadow:0 0 10px var(--s);
+  background:var(--card);
+  backdrop-filter:blur(12px);
+  transition:0.4s;
+  transform-style:preserve-3d;
+  box-shadow:0 10px 30px rgba(0,0,0,0.3);
+}
 
-        .hero h1{
-            font-size:2rem;
-        }
+/* BUTTON */
+button{
+  padding:10px 15px;
+  border:none;
+  border-radius:10px;
+  background:linear-gradient(90deg,var(--p),var(--s));
+  color:white;
+  cursor:pointer;
+  backdrop-filter:blur(12px);
+  transition:scale(1.05);
+  transform-style:preserve-3d;
+  box-shadow:0 10px 30px rgba(0,0,0,0.3);
+  text-align:center;
+  padding: 10px;
+  border-radius:10px;
+  border:1px solid var(--s);
+  box-shadow:0 0 10px var(--s);
+  transform-style:preserve-3d;
+  box-shadow:0 10px 30px rgba(0,0,0,0.3);
+}
+button:hover{
+  transform:scale(1.05);
+  background: linear-gradient(135deg, var(--p), var(--s));
+  backdrop-filter:blur(12px);
+  transition:0.4s;
+  transform-style:preserve-3d;
+  box-shadow:0 10px 30px rgba(0,0,0,0.3);
+  border-radius:10px;
+  border:1px solid var(--s);
+  box-shadow:0 0 10px var(--s);
+  background:var(--card);
+  backdrop-filter:blur(12px);
+  transition:0.4s;
+  transform-style:preserve-3d;
+  box-shadow:0 10px 30px rgba(0,0,0,0.3);
+  text-align:center;
+  padding: 10px;
+}
 
-        .hero h2{
-            font-size:1rem;
-        }
+/* LINKS */
+a.link{
+  color:var(--s);
+  text-decoration:none;
+  font-size:14px;
+  width: 50%;
+  height: 50%;
+  background: linear-gradient(135deg, var(--p), var(--s));
+  backdrop-filter:blur(12px);
+  transition:0.4s;
+  transform-style:preserve-3d;
+  box-shadow:0 10px 30px rgba(0,0,0,0.3);
+  border-radius:10px;
+  border:1px solid var(--s);
+  box-shadow:0 0 10px var(--s);
+  background:var(--card);
+  backdrop-filter:blur(12px);
+  transition:0.4s;
+  transform-style:preserve-3d;
+  box-shadow:0 10px 30px rgba(0,0,0,0.3);
+  text-align:center;
+  padding: 10px;
+  color:var(--text);
+  margin-top:10px;
+  margin-bottom:10px;
+  margin-left:10px;
+  margin-right:10px;
+  padding:10px;
+  border-radius:10px;
+  border:1px solid var(--s);
+  box-shadow:0 0 10px var(--s);
+  background:var(--card);
+}
 
-        nav{
-            justify-content:center;
-            text-align:center;
-        }
+a.link:hover{
+  width: 50%;
+  height: 50%;
+  background: linear-gradient(135deg, var(--p), var(--s));
+  backdrop-filter:blur(12px);
+  transition:0.4s;
+  transform-style:preserve-3d;
+  box-shadow:0 10px 30px rgba(0,0,0,0.3);
+}
 
-        nav a{
-            font-size:12px;
-        }
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:20px;
+  background:rgba(0,0,0,0.2);
+  border-top: 5px solid var(--s);
+  color:var(--text);
+}
 
-        .logo-box{
-          width:30px;
-          height:30px;
-          font-size:14px;
-        }
+footer:hover{
+  background: linear-gradient(135deg, var(--p), var(--s));
+  backdrop-filter:blur(12px);
+  transition:0.4s;
+  transform-style:preserve-3d;
+  box-shadow:0 10px 30px rgba(0,0,0,0.3);
+}
 
-        img{
-            width:220px;
-            height:220px;
-        }
+/* ANIMATIONS */
+@keyframes float{
+  0%,100%{transform:translateY(0)}
+  50%{
+    transform:translateY(-10px);
+  }
+}
 
-        section{
-            padding:50px 5%;
-        }
+@keyframes type{
+  0%{width:0}
+  50%{width:100%}
+  100%{width:0}
+}
 
-        p{
-          font-size:14px;
-          width: 90%;
-        }
+.hidden{
+  opacity:0;
+  transform:translateY(40px);
+  transition:1s;
+}
+.show{
+  opacity:1;
+  transform:translateY(0);
+}
+/* ================= MOBILE RESPONSIVE ================= */
+@media (max-width: 768px){
+    .logo-box,
+  .logo-box:hover{
+    width:30px !important;
+    height:30px !important;
+    min-width:30px;
+    min-height:30px;
+    font-size:12px;
+  }
+  nav{
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+  }
 
-        p a{
-          font-size:12px;
-          width: 90%;
-        }
-    }
+  nav div{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+  }
 
-    /* MOBILE */
-    @media (max-width:480px){
+  nav a{
+    width:auto;
+    height:auto;
+    font-size:14px;
+    padding:8px;
+  }
 
-      .hero h1{
-        font-size:1.6rem;
-      }
+  .logo{
+    width:100%;
+    justify-content:center;
+  }
 
-      .hero h2{
-        font-size:0.9rem;
-      }
+  .logo-box,
+  .logo-box:hover{
+    width:30px !important;
+    height:30px !important;
+    min-width:30px;
+    min-height:30px;
+    font-size:12px;
+  }
 
-      nav{
-        flex-direction:column;
-        align-items:center;
-      }
+  .toggle{
+    font-size:14px;
+    padding:5px 8px !important;
+  }
 
-      nav a{
-        margin:5px;
-        font-size:12px;
-      }
+  nav div{
+    gap:6px;
+  }
 
-      .logo-box{
-        width:30px;
-        height:30px;
-        font-size:14px;
-      }
+  .hero h1{
+    font-size:2rem;
+    width:90%;
+  }
 
-      img{
-        width:180px;
-        height:180px;
-      }
+  .hero h2{
+    font-size:1.2rem;
+    width:90%;
+  }
 
-      .card{
-        padding:15px;
-      }
+  .typing{
+    width:90%;
+    font-size:14px;
+  }
 
-      .grid{
-        grid-template-columns:1fr;
-      }
+  section{
+    padding:60px 5%;
+  }
 
-      section{
-        padding:30px 5%;
-      }
+  .grid{
+    grid-template-columns:1fr;
+  }
 
-      p{
-        font-size:14px;
-        width: 90%;
-      }
+  .card{
+    margin:10px 0;
+  }
 
-      p a{
-        font-size:12px;
-        width: 90%;
-      } 
-    }
+  button{
+    width:100%;
+  }
+
+  a.link{
+    width:100%;
+  }
+}
+
+/* SMALL MOBILE */
+@media (max-width: 480px){
+  .logo{
+    width:100% !important;
+    justify-content:center;
+  }
+
+  .logo-box{
+    width:30px !important;
+    height:30px !important;
+    font-size:12px;
+  }
+.hero h1{
+  font-size:1.6rem;
+}
+
+.hero h2{
+  font-size:1rem;
+}
+
+nav{
+  padding:8px;
+}
+}
 </style>
 </head>
 
 <body>
-    <canvas id="bgCanvas"></canvas>
-    <canvas id="matrix"></canvas>
-    <div id="particles-js"></div>
+  <canvas id="bgCanvas"></canvas>
+  <canvas id="matrix"></canvas>
+  <div id="particles-js"></div>
+<!-- NAVBAR -->
+<nav>
 
-    <!-- NAVBAR -->
-    <nav>
-        <div class="logo">
-            <div class="logo-box">U</div>
-                Usman Rafaqat
-        </div>
-        
-        <div>
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-            <span class="toggle" onclick="document.body.classList.toggle('light')">🌓</span>
-        </div>
-    </nav>
+  <div class="logo">
+    <div class="logo-box">UR</div>
+    Usman Rafaqat
+  </div>
 
-    <!-- HERO -->
-    <div class="hero">
-        <h1>Usman Rafaqat</h1>
-        <h2>Python Developer | Flask Developer</h2>
-        <div class="typing">Building modern full-stack applications ...</div>
+  <div>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#github">GitHub</a>
+    <a href="#contact">Contact</a>
+    <span class="toggle" onclick="document.body.classList.toggle('light')">🌓</span>
+  </div>
+
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <h1>Usman Rafaqat</h1>
+  <h2>Python Developer | Flask Developer</h2>
+  <div class="typing">Building modern full-stack applications...</div>
+</div>
+<center class="img">
+  <img src="image/e6b4d836-ab08-447c-a9bd-89cf05d36926.png" alt="Usman Rafaqat">
+  <p>My name is Usman Rafaqat</p>
+</center>
+
+<!-- ABOUT -->
+<section id="about" class="hidden">
+<h2>About Me</h2>
+<br>
+<div class="card">
+<p>Hello! I'm Usman Rafaqat, a passionate Python and Flask developer. I specialize in building modern full-stack applications with a focus on clean code and efficient solutions. With experience in MongoDB and JavaScript, I enjoy creating dynamic web applications that provide great user experiences. I'm always eager to learn new technologies and take on exciting projects.</p> 
+</div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="hidden">
+<h2>Skills & Learning</h2>
+<br>
+ <div class="grid">
+
+<div class="card">
+<h3>HTML</h3>
+<br>
+<a class="link" href="https://www.w3schools.com/html/" target="_blank">Learn HTML</a>
+</div>
+
+<div class="card">
+<h3>CSS</h3><br>
+
+<a class="link" href="https://www.w3schools.com/css/" target="_blank">Learn CSS</a>
+</div>
+
+<div class="card">
+<h3>JavaScript</h3><br>
+
+<a class="link" href="https://www.w3schools.com/js/" target="_blank">Learn JS</a>
+</div>
+
+<div class="card">
+<h3>Flask</h3><br>
+
+<a class="link" href="https://flask.palletsprojects.com/" target="_blank">Flask Docs</a>
+</div>
+
+<div class="card">
+<h3>MongoDB</h3><br>
+
+<a class="link" href="https://www.mongodb.com/docs/" target="_blank">MongoDB Docs</a>
+</div>
+
+<div class="card">
+<h3>Python</h3><br>
+
+<a class="link" href="https://www.w3schools.com/python/" target="_blank">Learn Python</a>
+</div>
+
+</div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="hidden">
+<h2>Projects</h2>
+<br>
+
+<div class="grid">
+
+    <div class="card">
+        <h3>Student Management System</h3><br>
+
+        <p>A web application for managing student records, built with Flask and MongoDB.</p><br>
+
+        <a href="https://dalmia.vercel.app" target="_blank"><br>
+
+        <button>Live Demo</button>
+        </a>
+</div>
+
+<div class="card">
+<h3>SecureLAN</h3><br>
+<p>MAC address based LAN security system.</p><br>
+
+<a href="https://securelan.vercel.app" target="_blank"><br>
+
+<button>Live Demo</button>
+</a>
+</div>
+
+</div>
+</section>
+
+<!-- GITHUB -->
+<section id="github" class="hidden">
+<h2>GitHub</h2>
+<br>
+
+    <div class="card">
+        <p>My GitHub Profile:</p><br>
+
+
+        <a href="https://github.com/" target="_blank">
+            <button><i class="fab fa-github"></i> View GitHub</button>
+        </a>
+
     </div>
+</section>
 
-    <img src="image/e6b4d836-ab08-447c-a9bd-89cf05d36926.png" alt="Usman Rafaqat">
+<!-- CONTACT -->
+<section id="contact" class="hidden">
+    <h2>Contact</h2><br>
 
-    <pre>
+    <div class="card">
 
-    </pre>
-    <br><br>
-    <!-- ABOUT -->
-    <section id="about">
-        <h2 style="text-align: center;">About</h2><br>
-        <div class="card">
-            <p style="text-align: justify;">My name is Usman Rafaqat, and I am a Python & Flask developer focused on building real-world full-stack applications using MongoDB, APIs, and modern web technologies. I have a passion for creating efficient and scalable web applications that solve real problems. With experience in both frontend and backend development, I enjoy working on projects that allow me to utilize my skills in Python, Flask, and MongoDB to deliver high-quality solutions. I am constantly learning and exploring new technologies to stay up-to-date with the latest trends in web development. My goal is to contribute to impactful projects and collaborate with like-minded developers to create innovative applications that make a difference.</p>
-        </div>
-    </section>
+        <p>Feel free to reach out to me for any inquiries or collaborations!</p><br>
 
-    <!-- SKILLS -->
-    <section id="skills" class="hidden">
-        <h2 style="text-align: center;">Skills & Learning</h2>
-        <br><br>
-        <div class="grid">
+        <p>Or</p><br>
 
-        <div class="card">
-            <h3>HTML</h3>
-            <a class="link" href="https://www.w3schools.com/html/" target="_blank">Learn HTML</a>
-        </div>
+        <p>Connect with me on social media:</p><br>
 
-        <div class="card">
-            <h3>CSS</h3>
-            <a class="link" href="https://www.w3schools.com/css/" target="_blank">Learn CSS</a>
-        </div>
+        <a href="https://www.linkedin.com/in/usman-rafaqat-9ba1b0235/" target="_blank">
+            <button><i class="fab fa-linkedin"></i> LinkedIn</button><br>
+        </a><br>
 
-        <div class="card">
-            <h3>JavaScript</h3>
-            <a class="link" href="https://www.w3schools.com/js/" target="_blank">Learn JS</a>
-        </div>
+        <p>What's your preferred method of contact?</p><br>
 
-        <div class="card">
-            <h3>Flask</h3>
-            <a class="link" href="https://flask.palletsprojects.com/" target="_blank">Flask Docs</a>
-        </div>
+        <p>Phone: +92 325 8072396</p><br>
 
-        <div class="card">
-            <h3>MongoDB</h3>
-            <a class="link" href="https://www.mongodb.com/docs/" target="_blank">MongoDB Docs</a>
-        </div>
+        <a href="mailto:usmanrafaqat67@gmail.com">
+            <button>Email: usmanrafaqat67@gmail.com</button>
+        </a>
+    </div>
+</section>
 
-        <div class="card">
-            <h3>Python</h3>
-            <a class="link" href="https://www.w3schools.com/python/" target="_blank">Learn Python</a>
-        </div>
+<!-- FOOTER -->
+<footer>
+    © 2026 Usman Rafaqat | Professional Portfolio
+</footer>
 
-        </div>
-    </section>
-
-    <!-- PROJECTS -->
-    <section id="projects" class="hidden">
-        <h2 style="text-align: center;">Projects</h2>
-        <br><br>
-        <div class="grid">
-
-            <div class="card">
-                <h3 style="color: #00ffae; text-align: center;">Student Management System</h3>
-                <p>A full-stack student management system built with Flask and MongoDB, featuring user authentication, CRUD operations, and a responsive design.</p>
-                <br>
-                <a href="https://dalmia.vercel.app" target="_blank">
-                    <center>
-                        <button>Live Demo</button>
-                    </center>
-                </a>
-            </div>
-
-            <div class="card">
-                <h3 style="color: #00ffae; text-align: center;">SecureLAN</h3>
-                <p>A secure local area network (LAN) application built with Flask, designed to facilitate encrypted communication and file sharing between devices on the same network.</p>
-                <br>
-                <a href="https://usmanrafaqat67-ship-it.github.io/pro2/" target="_blank">
-                    <center>
-                        <button>Live Demo</button>
-                    </center>
-                </a>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" style="text-align: center;">
-        <h2>Contact</h2><br>
-        <div class="card" style="text-align:center;">
-            <i class="fa-regular fa-envelope"></i>
-            Email: usmanrafaqat67@gmail.com<br><br>
-            <center>
-                <button>Send Email</button>
-            </center>
-        </div>
-    </section>
-
-    <img src="image/e6b4d836-ab08-447c-a9bd-89cf05d36926.png" class="profile-img" alt="Usman Rafaqat">
-    <br><br>
-
-    <pre>
-Usman Rafaqat
-
-    JavaScript Developer | Cascading Style Sheets  Developer
-
-    "Portfolio enthusiast & creator of Usman Rafaqat. 
-
-    Dedicated to building invisible walls that
-
-    protect our digital freedom."
-
-    <a href="https://github.com/usmanrafaqat67" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>        <a href="mailto:usmanrafaqat67@gmail.com"><i class="fa-regular fa-envelope"></i>  usmanrafaqat67@gmail.com</a>      <a href="tel:03258072396"><i class="fa-solid fa-phone"></i> +92 325 8072396</a>
-    </pre>
-    <br><br>
-
-    <!-- FOOTER -->
-    <footer>
-        <pre>
-                    Usman Rafaqat | Professional Portfolio 
-        <br>
-        © 2026 usmanrafaqat67 Systems. All Rights Reserved. Designed by Usman Rafaqat.
-
-<a href="https://github.com/usmanrafaqat67" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>          <a href="mailto:usmanrafaqat67@gmail.com"><i class="fa-regular fa-envelope"></i>  usmanrafaqat67@gmail.com</a>            <a href="tel:03258072396"><i class="fa-solid fa-phone"></i> +92 325 8072396</a>
-
-            <a href="#">Privacy Policy</a>          <a href="#">Terms of Service</a>
-
-                <a href="#">Documentation</a>
-        </pre>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
     <script>
         /* ================= THEME ================= */
         function toggleTheme(){
@@ -612,19 +964,19 @@ Usman Rafaqat
         });
 
         // MATRIX
-        // const matrixCanvas = document.getElementById("matrix");
-        // const matrixCtx = matrixCanvas.getContext("2d");
+        const matrixCanvas = document.getElementById("matrix");
+        const matrixCtx = matrixCanvas.getContext("2d");
 
-        // const letters = "01ABCDEF";
-        // const fontSize = 14;
-        // let drops = [];
+        const letters = "01ABCDEF";
+        const fontSize = 14;
+        let drops = [];
 
-        // function resetMatrix(){
-        //     matrixCanvas.width = window.innerWidth;
-        //     matrixCanvas.height = window.innerHeight;
-        //     const columns = Math.floor(matrixCanvas.width / fontSize);
-        //     drops = Array(columns).fill(1);
-        // }
+        function resetMatrix(){
+            matrixCanvas.width = window.innerWidth;
+            matrixCanvas.height = window.innerHeight;
+            const columns = Math.floor(matrixCanvas.width / fontSize);
+            drops = Array(columns).fill(1);
+        }
 
         function draw(){
         matrixCtx.fillStyle = "rgba(0,0,0,0.05)";
