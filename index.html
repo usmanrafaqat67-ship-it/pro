@@ -542,4 +542,497 @@ a.link{
   font-size:14px;
   width: 50%;
   height: 50%;
-  background: 
+  background: linear-gradient(135deg, var(--p), var(--s));
+  backdrop-filter:blur(12px);
+  transition:0.4s;
+  transform-style:preserve-3d;
+  box-shadow:0 10px 30px rgba(0,0,0,0.3);
+  border-radius:10px;
+  border:1px solid var(--s);
+  box-shadow:0 0 10px var(--s);
+  background:var(--card);
+  backdrop-filter:blur(12px);
+  transition:0.4s;
+  transform-style:preserve-3d;
+  box-shadow:0 10px 30px rgba(0,0,0,0.3);
+  text-align:center;
+  padding: 10px;
+  color:var(--text);
+  margin-top:10px;
+  margin-bottom:10px;
+  margin-left:10px;
+  margin-right:10px;
+  padding:10px;
+  border-radius:10px;
+  border:1px solid var(--s);
+  box-shadow:0 0 10px var(--s);
+  background:var(--card);
+}
+
+a.link:hover{
+  width: 50%;
+  height: 50%;
+  background: linear-gradient(135deg, var(--p), var(--s));
+  backdrop-filter:blur(12px);
+  transition:0.4s;
+  transform-style:preserve-3d;
+  box-shadow:0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:20px;
+  background:rgba(0,0,0,0.2);
+  border-top: 5px solid var(--s);
+  color:var(--text);
+}
+
+footer:hover{
+  background: linear-gradient(135deg, var(--p), var(--s));
+  backdrop-filter:blur(12px);
+  transition:0.4s;
+  transform-style:preserve-3d;
+  box-shadow:0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* ANIMATIONS */
+@keyframes float{
+  0%,100%{transform:translateY(0)}
+  50%{
+    transform:translateY(-10px);
+  }
+}
+
+@keyframes type{
+  0%{width:0}
+  50%{width:100%}
+  100%{width:0}
+}
+
+.hidden{
+  opacity:0;
+  transform:translateY(40px);
+  transition:1s;
+}
+.show{
+  opacity:1;
+  transform:translateY(0);
+}
+/* ================= MOBILE RESPONSIVE ================= */
+@media (max-width: 768px){
+    .logo-box,
+  .logo-box:hover{
+    width:30px !important;
+    height:30px !important;
+    min-width:30px;
+    min-height:30px;
+    font-size:12px;
+  }
+  nav{
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  nav div{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+
+  nav a{
+    width:auto;
+    height:auto;
+    font-size:14px;
+    padding:8px;
+  }
+
+  .logo{
+    width:100%;
+    justify-content:center;
+  }
+
+  .logo-box,
+  .logo-box:hover{
+    width:30px !important;
+    height:30px !important;
+    min-width:30px;
+    min-height:30px;
+    font-size:12px;
+  }
+
+  .toggle{
+    font-size:14px;
+    padding:5px 8px !important;
+  }
+
+  nav div{
+    gap:6px;
+  }
+
+  .hero h1{
+    font-size:2rem;
+    width:90%;
+  }
+
+  .hero h2{
+    font-size:1.2rem;
+    width:90%;
+  }
+
+  .typing{
+    width:90%;
+    font-size:14px;
+  }
+
+  section{
+    padding:60px 5%;
+  }
+
+  .grid{
+    grid-template-columns:1fr;
+  }
+
+  .card{
+    margin:10px 0;
+  }
+
+  button{
+    width:100%;
+  }
+
+  a.link{
+    width:100%;
+  }
+}
+
+/* SMALL MOBILE */
+@media (max-width: 480px){
+  .logo{
+    width:100% !important;
+    justify-content:center;
+  }
+
+  .logo-box{
+    width:30px !important;
+    height:30px !important;
+    font-size:12px;
+  }
+.hero h1{
+  font-size:1.6rem;
+}
+
+.hero h2{
+  font-size:1rem;
+}
+
+nav{
+  padding:8px;
+}
+}
+</style>
+</head>
+
+<body>
+  <canvas id="bgCanvas"></canvas>
+  <canvas id="matrix"></canvas>
+  <div id="particles-js"></div>
+<!-- NAVBAR -->
+<nav>
+
+  <div class="logo">
+    <div class="logo-box">UR</div>
+    Usman Rafaqat
+  </div>
+
+  <div>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#github">GitHub</a>
+    <a href="#contact">Contact</a>
+    <span class="toggle" onclick="document.body.classList.toggle('light')">🌓</span>
+  </div>
+
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <h1>Usman Rafaqat</h1>
+  <h2>Python Developer | Flask Developer</h2>
+  <div class="typing">Building modern full-stack applications...</div>
+</div>
+<center class="img">
+  <img src="image/e6b4d836-ab08-447c-a9bd-89cf05d36926.png" alt="Usman Rafaqat">
+  <p>My name is Usman Rafaqat</p>
+</center>
+
+<!-- ABOUT -->
+<section id="about" class="hidden">
+<h2>About Me</h2>
+<br>
+<div class="card">
+<p>Hello! I'm Usman Rafaqat, a passionate Python and Flask developer. I specialize in building modern full-stack applications with a focus on clean code and efficient solutions. With experience in MongoDB and JavaScript, I enjoy creating dynamic web applications that provide great user experiences. I'm always eager to learn new technologies and take on exciting projects.</p> 
+</div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="hidden">
+<h2>Skills & Learning</h2>
+<br>
+ <div class="grid">
+
+<div class="card">
+<h3>HTML</h3>
+<br>
+<a class="link" href="https://www.w3schools.com/html/" target="_blank">Learn HTML</a>
+</div>
+
+<div class="card">
+<h3>CSS</h3><br>
+
+<a class="link" href="https://www.w3schools.com/css/" target="_blank">Learn CSS</a>
+</div>
+
+<div class="card">
+<h3>JavaScript</h3><br>
+
+<a class="link" href="https://www.w3schools.com/js/" target="_blank">Learn JS</a>
+</div>
+
+<div class="card">
+<h3>Flask</h3><br>
+
+<a class="link" href="https://flask.palletsprojects.com/" target="_blank">Flask Docs</a>
+</div>
+
+<div class="card">
+<h3>MongoDB</h3><br>
+
+<a class="link" href="https://www.mongodb.com/docs/" target="_blank">MongoDB Docs</a>
+</div>
+
+<div class="card">
+<h3>Python</h3><br>
+
+<a class="link" href="https://www.w3schools.com/python/" target="_blank">Learn Python</a>
+</div>
+
+</div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="hidden">
+<h2>Projects</h2>
+<br>
+
+<div class="grid">
+
+    <div class="card">
+        <h3>Student Management System</h3><br>
+
+        <p>A web application for managing student records, built with Flask and MongoDB.</p><br>
+
+        <a href="https://dalmia.vercel.app" target="_blank"><br>
+
+        <button>Live Demo</button>
+        </a>
+</div>
+
+<div class="card">
+<h3>SecureLAN</h3><br>
+<p>MAC address based LAN security system.</p><br>
+
+<a href="https://securelan.vercel.app" target="_blank"><br>
+
+<button>Live Demo</button>
+</a>
+</div>
+
+</div>
+</section>
+
+<!-- GITHUB -->
+<section id="github" class="hidden">
+<h2>GitHub</h2>
+<br>
+
+    <div class="card">
+        <p>My GitHub Profile:</p><br>
+
+
+        <a href="https://github.com/" target="_blank">
+            <button><i class="fab fa-github"></i> View GitHub</button>
+        </a>
+
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="hidden">
+    <h2>Contact</h2><br>
+
+    <div class="card">
+
+        <p>Feel free to reach out to me for any inquiries or collaborations!</p><br>
+
+        <p>Or</p><br>
+
+        <p>Connect with me on social media:</p><br>
+
+        <a href="https://www.linkedin.com/in/usman-rafaqat-9ba1b0235/" target="_blank">
+            <button><i class="fab fa-linkedin"></i> LinkedIn</button><br>
+        </a><br>
+
+        <p>What's your preferred method of contact?</p><br>
+
+        <p><i class="fa-solid fa-phone"></i> &nbsp;: +92 325 8072396</p><br>
+
+        <a href="mailto:usmanrafaqat67@gmail.com">
+            <button><i class="fa-regular fa-envelope"></i> &nbsp;: usmanrafaqat67@gmail.com</button>
+        </a>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    © 2026 Usman Rafaqat | Professional Portfolio
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+    <script>
+        /* ================= THEME ================= */
+        function toggleTheme(){
+        document.body.classList.toggle("light");
+        }
+
+        /* ================= PARTICLE BACKGROUND ================= */
+        const canvas = document.getElementById("bgCanvas");
+        const ctx = canvas.getContext("2d");
+
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        let particles = [];
+
+        for(let i=0;i<80;i++){
+            particles.push({
+                x:Math.random()*canvas.width,
+                y:Math.random()*canvas.height,
+                r:Math.random()*3,
+                dx:(Math.random()-0.5)*1,
+                dy:(Math.random()-0.5)*1
+            });
+        }
+
+        function animate(){
+            ctx.clearRect(0,0,canvas.width,canvas.height);
+
+            ctx.fillStyle="rgba(0,255,174,0.5)";
+
+        particles.forEach(p=>{
+            ctx.beginPath();
+            ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+            ctx.fill();
+
+            p.x += p.dx;
+            p.y += p.dy;
+
+            if(p.x < 0 || p.x > canvas.width) p.dx *= -1;
+            if(p.y < 0 || p.y > canvas.height) p.dy *= -1;
+        });
+
+        requestAnimationFrame(animate);
+        }
+
+        animate();
+
+        window.addEventListener("resize",()=>{
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        });
+
+        // PARTICLES
+        particlesJS("particles-js", {
+        particles:{
+            number:{value:80},
+            color:{value:"#00f0ff"},
+            line_linked:{enable:true,color:"#7c3aed"},
+            move:{speed:2}
+        }
+        });
+
+        // MATRIX
+        const matrixCanvas = document.getElementById("matrix");
+        const matrixCtx = matrixCanvas.getContext("2d");
+
+        const letters = "01ABCDEF";
+        const fontSize = 14;
+        let drops = [];
+
+        function resetMatrix(){
+            matrixCanvas.width = window.innerWidth;
+            matrixCanvas.height = window.innerHeight;
+            const columns = Math.floor(matrixCanvas.width / fontSize);
+            drops = Array(columns).fill(1);
+        }
+
+        function draw(){
+        matrixCtx.fillStyle = "rgba(0,0,0,0.05)";
+        matrixCtx.fillRect(0,0,matrixCanvas.width,matrixCanvas.height);
+
+        matrixCtx.fillStyle = "#00ffcc";
+        matrixCtx.font = fontSize + "px monospace";
+
+        drops.forEach((y,i)=>{
+            const text = letters[Math.floor(Math.random()*letters.length)];
+            matrixCtx.fillText(text, i * fontSize, y * fontSize);
+
+            if(y * fontSize > matrixCanvas.height && Math.random() > 0.975){
+                drops[i] = 0;
+            }
+            drops[i]++;
+        });
+        }
+
+        resetMatrix();
+        setInterval(draw,33);
+
+        window.addEventListener("resize",()=>{
+            resetMatrix();
+        });
+        document.querySelectorAll(".card").forEach(card=>{
+        card.addEventListener("mousemove",(e)=>{
+            let x = e.offsetX;
+            let y = e.offsetY;
+            let centerX = card.offsetWidth / 2;
+            let centerY = card.offsetHeight / 2;
+
+            let rotateX = (y - centerY) / 10;
+            let rotateY = (centerX - x) / 10;
+
+            card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+        });
+
+        card.addEventListener("mouseleave",()=>{
+                card.style.transform = "rotateX(0) rotateY(0)";
+            });
+        });
+
+        // SCROLL REVEAL
+        const observer = new IntersectionObserver(entries=>{
+            entries.forEach(entry=>{
+                if(entry.isIntersecting){
+                    entry.target.classList.add("show");
+                }
+            });
+        });
+
+        document.querySelectorAll(".hidden").forEach(el=>{
+            observer.observe(el);
+        });
+    </script>
+
+</body>
+</html>
