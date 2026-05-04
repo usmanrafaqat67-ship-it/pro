@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Usman Rafaqat | Portfolio</title>
-
+<link rel="website icon" type="png" href="image/e6b4d836-ab08-447c-a9bd-89cf05d36926.png">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
@@ -455,7 +455,7 @@ section{
 }
 
 .card:hover{
-  transform:rotateX(8deg) rotateY(8deg) translateY(-10px);
+  /* transform:rotateX(8deg) rotateY(8deg) translateY(-10px); */
   box-shadow:0 10px 30px rgba(0,0,0,0.3);
   background: var(--card);
   backdrop-filter:blur(12px);
@@ -629,9 +629,12 @@ footer:hover{
     min-height:30px;
     font-size:12px;
   }
-  .logo-box{
-    padding-top:20px;
+
+  .logo{
+    width:100%;
+    justify-content:center;
   }
+
   nav{
     flex-direction: column;
     gap: 10px;
@@ -651,20 +654,6 @@ footer:hover{
     padding:8px;
   }
 
-  .logo{
-    width:100%;
-    justify-content:center;
-  }
-
-  .logo-box,
-  .logo-box:hover{
-    width:30px !important;
-    height:30px !important;
-    min-width:30px;
-    min-height:30px;
-    font-size:12px;
-  }
-
   .toggle{
     font-size:14px;
     padding:5px 8px !important;
@@ -677,6 +666,7 @@ footer:hover{
   .hero h1{
     font-size:2rem;
     width:90%;
+    margin-top: 15%;
   }
 
   .hero h2{
@@ -687,6 +677,10 @@ footer:hover{
   .typing{
     width:90%;
     font-size:14px;
+  }
+
+  .img p{
+
   }
 
   section{
@@ -981,47 +975,47 @@ nav{
         //     drops = Array(columns).fill(1);
         // }
 
-        function draw(){
-        matrixCtx.fillStyle = "rgba(0,0,0,0.05)";
-        matrixCtx.fillRect(0,0,matrixCanvas.width,matrixCanvas.height);
+        // function draw(){
+        // matrixCtx.fillStyle = "rgba(0,0,0,0.05)";
+        // matrixCtx.fillRect(0,0,matrixCanvas.width,matrixCanvas.height);
 
-        matrixCtx.fillStyle = "#00ffcc";
-        matrixCtx.font = fontSize + "px monospace";
+        // matrixCtx.fillStyle = "#00ffcc";
+        // matrixCtx.font = fontSize + "px monospace";
 
-        drops.forEach((y,i)=>{
-            const text = letters[Math.floor(Math.random()*letters.length)];
-            matrixCtx.fillText(text, i * fontSize, y * fontSize);
+        // drops.forEach((y,i)=>{
+        //     const text = letters[Math.floor(Math.random()*letters.length)];
+        //     matrixCtx.fillText(text, i * fontSize, y * fontSize);
 
-            if(y * fontSize > matrixCanvas.height && Math.random() > 0.975){
-                drops[i] = 0;
-            }
-            drops[i]++;
-        });
-        }
+        //     if(y * fontSize > matrixCanvas.height && Math.random() > 0.975){
+        //         drops[i] = 0;
+        //     }
+        //     drops[i]++;
+        // });
+        // }
 
-        resetMatrix();
-        setInterval(draw,33);
+        // resetMatrix();
+        // setInterval(draw,33);
 
-        window.addEventListener("resize",()=>{
-            resetMatrix();
-        });
-        document.querySelectorAll(".card").forEach(card=>{
-        card.addEventListener("mousemove",(e)=>{
-            let x = e.offsetX;
-            let y = e.offsetY;
-            let centerX = card.offsetWidth / 2;
-            let centerY = card.offsetHeight / 2;
+        // window.addEventListener("resize",()=>{
+        //     resetMatrix();
+        // });
+        // document.querySelectorAll(".card").forEach(card=>{
+        // card.addEventListener("mousemove",(e)=>{
+        //     let x = e.offsetX;
+        //     let y = e.offsetY;
+        //     let centerX = card.offsetWidth / 2;
+        //     let centerY = card.offsetHeight / 2;
 
-            let rotateX = (y - centerY) / 10;
-            let rotateY = (centerX - x) / 10;
+            // let rotateX = (y - centerY) / 10;
+            // let rotateY = (centerX - x) / 10;
 
-            card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-        });
+            // card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+        // });
 
-        card.addEventListener("mouseleave",()=>{
-                card.style.transform = "rotateX(0) rotateY(0)";
-            });
-        });
+        // card.addEventListener("mouseleave",()=>{
+                // card.style.transform = "rotateX(0) rotateY(0)";
+            // });
+        // });
 
         // SCROLL REVEAL
         const observer = new IntersectionObserver(entries=>{
