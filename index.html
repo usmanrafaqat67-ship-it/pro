@@ -34,27 +34,27 @@
 
       /* ===== ULTRA PRO BACKGROUND ===== */
 /* Gradient Animation */
-@keyframes gradientMove {
+/* @keyframes gradientMove {
   0% {background-position: 0% 50%;}
   20%{background-position: 20% 60%}
   40%{background-position: 60% 70%}
   50% {background-position: 100% 50%;}
   70%{background-position: 20% 60%}
   100% {background-position: 0% 50%;}
-}
+} */
 
 /* PARTICLES CANVAS */
-#particles {
+/* #particles {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   z-index: -1;
-}
+} */
 
 /* Glow overlay */
-body::after{
+/* body::after{
   content:"";
   position:fixed;
   top:0;
@@ -63,11 +63,10 @@ body::after{
   height:100%;
   background: radial-gradient(circle at center, rgba(0,198,255,0.2), transparent 70%, transparent 100%, rgba(255,0,150,0.2) 70%, transparent 100%, rgba(255,255,0,0.2) 70%, transparent 100%, rgba(0,255,150,0.2) 70%, transparent 100%, rgba(255,0,255,0.2) 70%, transparent 100%, rgba(0,255,255,0.2) 70%, transparent 100%, rgba(255,255,255,0.2) 70%, transparent 100%, rgba(255,0,0,0.2) 70%, transparent 100%, rgba(0,255,0,0.2) 70%, transparent 100%, rgba(0,0,255,0.2) 70%, transparent 100%, rgba(255,255,0,0.2) 70%, transparent 100%, rgba(255,0,255,0.2) 70%, transparent 100%, rgba(0,255,255,0.2) 70%, transparent 100%, rgba(255,255,255,0.2) 70%, transparent 100%, rgba(255,0,0,0.2) 70%, transparent 100%, rgba(0,255,0,0.2) 70%, transparent 100%, rgba(0,0,255,0.2) 70%, transparent 100%, rgba(255,255,0,0.2) 70%, transparent 100%, rgba(255,0,255,0.2) 70%, transparent 100%, rgba(0,255,255,0.2) 70%, transparent 100%, rgba(255,255,255,0.2) 70%, transparent 100%, rgba(255,0,0,0.2) 70%, transparent 100%, rgba(0,255,0,0.2) 70%, transparent 100%, rgba(0,0,255,0.2) 70%, transparent 100%, rgba(255,255,0,0.2) 70%, transparent 100%, rgba(255,0,255,0.2) 70%, transparent 100%, rgba(0,255,255,0.2) 70%, transparent 100%, rgba(255,255,255,0.2) 70%, transparent 100%);
   pointer-events:none;
-
-}
+} */
   body{
-    /* background:var(--bg); */
-    background: linear-gradient(270deg,#0f2027,#203a43,#2c5364,#00c6ff,#0072ff,#ff512f,#dd2476,#ff512f,#dd2476,#ff512f);
+    background:var(--bg);
+    /* background: linear-gradient(270deg,#0f2027,#203a43,#2c5364,#00c6ff,#0072ff,#ff512f,#dd2476,#ff512f,#dd2476,#ff512f); */
     color:var(--text);
     overflow-x:hidden;
     scroll-behavior:smooth;
@@ -77,14 +76,14 @@ body::after{
 }
 
  /* ================= BACKGROUND CANVAS ================= */
-   /* #bgCanvas{
+   #bgCanvas{
         position:fixed;
         top:0;
         left:0;
         width:100%;
         height:100%;
         z-index:-3;
-    } */
+    }
 
     /* #matrix{
         position:fixed;
@@ -95,14 +94,14 @@ body::after{
         z-index:-2;
     } */
 
-    /* #particles-js{
+    #particles-js{
         position:fixed;
         top:0;
         left:0;
         width:100%;
         height:100%;
         z-index:-1;
-    } */
+    }
 
 /* ================= LOGO ================= */
 .logo{
