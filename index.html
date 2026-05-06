@@ -32,10 +32,10 @@
   font-family:Arial, sans-serif;
 }
 
-    /* ===== ULTRA PRO BACKGROUND ===== */
+            /* ===== ULTRA PRO BACKGROUND ===== */
 
 body{
-  background: linear-gradient(270deg,#0f2027,#203a43,#2c5364,#00c6ff,#0072ff);
+  background: linear-gradient(270deg,#0f2027,#203a43,#2c5364,#00c6ff,#0072ff,#ff512f,#dd2476,#ff512f,#dd2476,#ff512f);
   background-size: 400% 400%;
   animation: gradientMove 15s ease infinite;
   overflow-x: hidden;
@@ -44,7 +44,10 @@ body{
 /* Gradient Animation */
 @keyframes gradientMove {
   0% {background-position: 0% 50%;}
+  20%{background-position: 20% 60%}
+  40%{background-position: 60% 70%}
   50% {background-position: 100% 50%;}
+  70%{background-position: 20% 60%}
   100% {background-position: 0% 50%;}
 }
 
@@ -66,10 +69,10 @@ body::after{
   left:0;
   width:100%;
   height:100%;
-  background: radial-gradient(circle at center, rgba(0,198,255,0.2), transparent 70%);
+  background: radial-gradient(circle at center, rgba(0,198,255,0.2), transparent 70%, transparent 100%, rgba(255,0,150,0.2) 70%, transparent 100%, rgba(255,255,0,0.2) 70%, transparent 100%, rgba(0,255,150,0.2) 70%, transparent 100%, rgba(255,0,255,0.2) 70%, transparent 100%, rgba(0,255,255,0.2) 70%, transparent 100%, rgba(255,255,255,0.2) 70%, transparent 100%, rgba(255,0,0,0.2) 70%, transparent 100%, rgba(0,255,0,0.2) 70%, transparent 100%, rgba(0,0,255,0.2) 70%, transparent 100%, rgba(255,255,0,0.2) 70%, transparent 100%, rgba(255,0,255,0.2) 70%, transparent 100%, rgba(0,255,255,0.2) 70%, transparent 100%, rgba(255,255,255,0.2) 70%, transparent 100%, rgba(255,0,0,0.2) 70%, transparent 100%, rgba(0,255,0,0.2) 70%, transparent 100%, rgba(0,0,255,0.2) 70%, transparent 100%, rgba(255,255,0,0.2) 70%, transparent 100%, rgba(255,0,255,0.2) 70%, transparent 100%, rgba(0,255,255,0.2) 70%, transparent 100%, rgba(255,255,255,0.2) 70%, transparent 100%, rgba(255,0,0,0.2) 70%, transparent 100%, rgba(0,255,0,0.2) 70%, transparent 100%, rgba(0,0,255,0.2) 70%, transparent 100%, rgba(255,255,0,0.2) 70%, transparent 100%, rgba(255,0,255,0.2) 70%, transparent 100%, rgba(0,255,255,0.2) 70%, transparent 100%, rgba(255,255,255,0.2) 70%, transparent 100%);
   pointer-events:none;
-}
 
+}
   body{
   background:var(--bg);
   color:var(--text);
@@ -770,6 +773,7 @@ nav{
 </head>
 
 <body>
+  <canvas id="particles"></canvas>
   <canvas id="bgCanvas"></canvas>
   <canvas id="matrix"></canvas>
   <div id="particles-js"></div>
@@ -997,6 +1001,52 @@ nav{
             move:{speed:2}
         }
         });
+
+        // ===== PARTICLES SYSTEM =====
+      const canvas = document.getElementById("particles");
+      const ctx = canvas.getContext("2d");
+      
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      
+      let particles = [];
+      
+      for(let i = 0; i < 80; i++){
+        particles.push({
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          size: Math.random() * 3,
+          speedX: (Math.random() - 0.5),
+          speedY: (Math.random() - 0.5)
+        });
+      }
+      
+      function animateParticles(){
+        ctx.clearRect(0,0,canvas.width,canvas.height);
+      
+        particles.forEach(p => {
+          p.x += p.speedX;
+          p.y += p.speedY;
+      
+          if(p.x < 0 || p.x > canvas.width) p.speedX *= -1;
+          if(p.y < 0 || p.y > canvas.height) p.speedY *= -1;
+      
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.size, 0, Math.PI*2);
+          ctx.fillStyle = "rgba(0,198,255,0.7)";
+          ctx.fill();
+        });
+      
+        requestAnimationFrame(animateParticles);
+      }
+      
+      animateParticles();
+      
+      // Resize fix
+      window.addEventListener("resize", () => {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+      });
 
         // MATRIX
         // const matrixCanvas = document.getElementById("matrix");
